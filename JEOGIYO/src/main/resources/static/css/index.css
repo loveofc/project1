@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+body {
+	background-color: #fffffc;
+}
+
+#mainWrap {
+	width: 1440px;
+	margin: 5px auto;
+	height: 800px;
+	display: flex;
+	flex-direction: column;
+}
+
+#NewMenu {
+	width: 100%;
+	height: 100%;
+}
+
+#m1 {
+	width: 100%;
+	height: 450px;
+
+	display: flex;
+}
+
+#m1 .contentsList {
+	width: 70%;
+
+}
+
+#m1 div:first-child+div {
+	width: 30%;
+}
+
+.contentsList {
+	overflow:hidden;
+	position:relative;
+	width: 70%;
+	height: 450px;
+}
+
+.list {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	background-size: auto;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+img{
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+}
+.list:nth-child(1){
+
+}
+.list:nth-child(2){
+	left:calc(200%);
+
+}
+.list:nth-child(3){
+	left:calc(300%);
+
+}
+.list:nth-child(4){
+	left:calc(400%);
+
+}
+.list:nth-child(5){
+	left:calc(500%);
+
+}
+
+#m2 {
+	
+	width: 100%;
+	height: 350px;
+	display: flex;
+}
+
+#m2 .m2Child:nth-child(1) {
+	width: 35%;
+	background-color: #ffd2d2;
+}
+
+#m2 .m2Child:nth-child(2) {
+	padding:15px;
+	background-color: #ffffdb;
+	width: 35%;
+}
+
+#m2 .m2Child:nth-child(3) {
+	width: 30%;
+	background-color: #80ffff;
+}
+
+#storeSearch {
+	
+	box-sizing: border-box;
+	width: 100%;
+	height: 250px;
+	padding: 20px;
+	overflow: auto;
+}
+#storeSearch::-webkit-scrollbar {
+	width: 20px; /*스크롤바의 너비*/
+}
+
+#storeSearch::-webkit-scrollbar-thumb {
+	background-color: #ff3333; /*스크롤바의 색상*/
+	background-clip: padding-box;
+	border: 4px solid transparent;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+#storeSearch::-webkit-scrollbar-track {
+	background-color: #c8c8c8; /*스크롤바 트랙 색상*/
+}
+.listResult{
+	background-color: #ffff9f;
+	padding:15px;
+	margin-top:5px;
+}
+.listResult:hover{
+	background-color: #e0e4fe;
+}
