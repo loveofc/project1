@@ -18,6 +18,7 @@ import com.j.service.SearchStore;
 @RestController
 @RequestMapping("/")
 public class FrontController {
+	
 	@Autowired
 	SearchStore s;
 	

@@ -141,12 +141,15 @@ function selectMain() {
 
 //sub 선택시 작동하는 메서드
 function selectSub() {	
+	console.log("selectSub")
 	let sido1 = document.getElementById("sido1");
 	let indexValue = sido1.value;
+	console.log(indexValue)
 	let arrayFile =["","","stores","busan"]
 	let sido2 = document.getElementById("sido2");
 	let index = sido2.value;
 	let str = sido2.childNodes[index - 1].childNodes[0].textContent
+	console.log(str)
 	let storelists = document.getElementById("storelists");
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -189,7 +192,7 @@ function selectSub() {
 		}
 
 	};
-	xhttp.open("GET", "../js/json/"+arrayFile[indexValue]+".json", true);
+	xhttp.open("GET", "../js/json/"+arrayFile[indexValue]+".json", false);
 	xhttp.send();
 
 }

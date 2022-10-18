@@ -5,14 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="../css/menu.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="allWrap">
 
 	<jsp:include page="../top/top.jsp"/>
 	
-	<div>
-		${arr}
+	<div id="menuList">
+	
 	</div>
 	
 	<jsp:include page="../bottom/bottom.jsp"/>

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+
+#allWrap{
+	width:1440px;
+}
+
+#menuList{
+	width:1440px;
+	height:500px;
+	background:#ffac12;
+}

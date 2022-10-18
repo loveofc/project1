@@ -18,6 +18,27 @@
 	width: 1440px;
 	justify-content: space-between;
 }
+#login{
+	margin: 10px auto;
+	padding: 0px 15px;
+	width: 1440px;
+	
+}
+#login ul{
+	display: flex;
+	margin: 5px auto;
+	list-style:none;
+	flow:right;
+}
+#login ul li{
+	display:block;
+	width:70px;
+	height:30px;
+	margin-right:10px;
+	text-align:center;
+	line-height:30px;
+	
+}
 
 #logo a {
 	color: black;
@@ -52,7 +73,15 @@
 </style>
 </head>
 <body>
+	<div id="login">
+			<ul>
+				<li>로그인</li>
+				<li>회원가입</li>
+				<li>고객센터</li>
+			</ul>
+		</div>
 	<div id="wrap">
+		
 		<h2 id="logo">
 			<a href="../index">JEOGIYO 2000</a>
 		</h2>
