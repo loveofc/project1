@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace='com.j.mapper.MenuMapper'>
+ 	<!-- 시리즈별로 리스트 가져오기-->
+	<select id="selectSeries" parameterType="String"  resultType="com.j.dto.MenuDTO">
+		select * from menus  
+	<if test="series != null">
+		where series = #{series}
+	</if>
+	</select>
+	
+	
+</mapper> 

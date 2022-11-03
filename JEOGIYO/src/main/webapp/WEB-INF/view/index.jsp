@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>intro</title>
 <link href="css/index.css" rel="stylesheet" type="text/css">
 <script src="js/index.js"></script>
@@ -13,51 +14,46 @@
 	<div>
 		<jsp:include page="./top/top.jsp" />
 	</div>
+
 	<div id="mainWrap">
+
 		<div id="m1">
-
-			<div class="contentsList">
+			<div class="contentsList">		
+			
 				<div class="list">
-					<img src="../img/kimyujung.png" width="100%" height="100%">
+					<img src="./img/1.jpg" width="100%" height="100%">
 				</div>
 				<div class="list">
-					<img src="../img/namjihyen.png" width="100%" height="100%">
+					<img src="./img/2.jpg" width="100%" height="100%">
 				</div>
 				<div class="list">
-					<img src="../img/kimyujung2.png" width="100%" height="100%">
+					<img src="./img/3.png" width="100%" height="100%">
 				</div>
-				<div class="list">
-					<img src="../img/seohyenjin.png" width="100%" height="100%">
-				</div>
-				<div class="list">
-					<img src="../img/jichanguk.png" width="100%" height="100%">
-				</div>
+			  	<div class="list">
+					<img src="./img/4.jpg" width="100%" height="100%">
+				</div>			
 			</div>
-
-			<div>
-				<img src="../img/event.png" id="NewMenu">
+			
+			<div id="imageWrap">
+				<img src="./img/5.jpeg" id="NewMenu">
 			</div>
 		</div>
-		<button onclick="slideFunc()">변경</button>
 		<div id="m2">
-			<div class="m2Child"></div>
+			<div class="m2Child">
+			<iframe width="100%" height="100%" src="https://www.youtube.com/embed/I2BRguSlZhE" title="YouTube video player" 
+			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen></iframe>
+			</div>
 			<div class="m2Child">
 				<h2>SEARCH.....</h2>
-				<form method="get" action="index">
+				<form method="get" action="/findstore">
 					<p>매장명을 입력해주세요.</p>
-					<input type="text" name="storeName">
+					<input type="text" name="storename">
 					<button>검색</button>
 				</form>
 				<hr>
 				<div id="storeSearch">
-					<c:forEach var="list" items="${lists}">
-						<div class="listResult">
-							<p>${list.storeName}</p>
-							<p>${list.addr}</p>
-							<p>${list.phone}</p>
-							<p>${list.time}</p>
-						</div>
-					</c:forEach>
+					${str}
 					<p>
 						<a href="../nav/map">더보기</a>
 					</p>

@@ -5,6 +5,17 @@
 	box-sizing:border-box;
 }
 body {
+	background: #F8FFE5;
+}
+
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
 	background-color: #fffffc;
 }
 
@@ -21,77 +32,73 @@ body {
 	height: 100%;
 }
 
+
 #m1 {
+
 	width: 100%;
 	height: 450px;
-
 	display: flex;
-}
 
-#m1 .contentsList {
-	width: 70%;
-
-}
-
-#m1 div:first-child+div {
-	width: 30%;
 }
 
 .contentsList {
-	overflow:hidden;
-	position:relative;
+	margin: 0 auto 0; position : relative;
 	width: 70%;
-	height: 450px;
+	height: 100%;
+	transform-origin: 0px 0px;
+	transform-style: preserve-3d;
+	transition: transform 0.5s ease-in;
+	position: relative;
+	overflow:hidden;
 }
 
 .list {
-	position:absolute;
-	width: 100%;
-	height: 100%;
+	position: absolute;
+	width: 100%; 
+	height : 450px;
 	background-size: auto;
-	background-repeat:no-repeat;
-	background-position:center;
+	background-repeat: no-repeat;
+	background-position: center;
 }
-img{
-	width: 100%;
-	height: 100%;
-	object-fit:cover;
-}
-.list:nth-child(1){
-
-}
-.list:nth-child(2){
-	left:calc(200%);
-
-}
-.list:nth-child(3){
-	left:calc(300%);
-
-}
-.list:nth-child(4){
-	left:calc(400%);
-
-}
-.list:nth-child(5){
-	left:calc(500%);
-
-}
-
-#m2 {
+.list:nth-child(1) {
+	left: calc(0);
+} 
+.list :nth-child(2) {
 	
+
+	left: calc(200%);
+}
+
+.list:nth-child(3) {
+
+
+	left: calc(300%);
+}
+
+.list:nth-child(4) {
+
+	left: calc(400%);
+}
+
+#imageWrap{
+	width:30%;
+}
+#m2 {
 	width: 100%;
-	height: 350px;
 	display: flex;
 }
-
+#m2 .m2Child{
+	box-sizing: border-box;
+}
 #m2 .m2Child:nth-child(1) {
+	
 	width: 35%;
-	background-color: #ffd2d2;
+
 }
 
 #m2 .m2Child:nth-child(2) {
-	padding:15px;
-	background-color: #ffffdb;
+	padding: 15px;
+
 	width: 35%;
 }
 
@@ -101,13 +108,13 @@ img{
 }
 
 #storeSearch {
-	
 	box-sizing: border-box;
 	width: 100%;
 	height: 250px;
 	padding: 20px;
 	overflow: auto;
 }
+
 #storeSearch::-webkit-scrollbar {
 	width: 20px; /*스크롤바의 너비*/
 }
@@ -123,11 +130,69 @@ img{
 #storeSearch::-webkit-scrollbar-track {
 	background-color: #c8c8c8; /*스크롤바 트랙 색상*/
 }
-.listResult{
+
+.listResult {
 	background-color: #ffff9f;
-	padding:15px;
-	margin-top:5px;
+	padding: 15px;
+	margin-top: 5px;
 }
-.listResult:hover{
+
+.listResult:hover {
 	background-color: #e0e4fe;
+}
+@media (max-width: 800px) {
+	
+#mainWrap {
+	width:100%;
+	height:100%;
+
+}
+  #m1{
+  	flex-wrap:wrap;
+  	height:100%;
+  }
+  .contentsList  {
+   	width:100%;
+   	height: 225px;	
+  }
+  .list {
+	width: 100%;
+	height: 100%;	
+}
+  #imageWrap{
+  	width:100%;
+  }
+  #m2{
+  	flex-wrap:wrap;
+  	height:100%;
+  }
+  #m2 .m2Child{
+	width:100%;
+}
+  #m2 .m2Child:nth-child(1) {
+	width: 100%;
+
+	height:100%;
+}
+
+	#m2 .m2Child:nth-child(2) {
+	padding: 15px;
+	width: 100%;
+	height:100%;
+	}
+
+#m2 .m2Child:nth-child(3) {
+	width: 100%;
+	background-color: #80ffff;
+	height:200px;
+}
+#bottom_wrap{
+	width:100%;
+}
+}
+@media (max-width: 450px) {
+	.contentsList  {
+   	width:100%;
+   	height: 125px;	
+  }
 }

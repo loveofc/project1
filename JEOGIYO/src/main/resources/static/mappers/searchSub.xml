@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace='com.j.mapper.SearchSubMapper'>
+ 	<!-- 시/도 단위 리스트 검색-->
+	<select id="selectSub1" parameterType="String"  resultType="com.j.dto.SearchSubDTO">
+		select sub1 from stores GROUP BY sub1  ORDER BY sub1
+	</select>
+	
+	<!-- 시,구,군 단위 리스트 검색 -->
+	<select id="selectSub2" parameterType="String"  resultType="com.j.dto.SearchSubDTO">
+		select sub2 from stores WHERE sub1 = #{sub1} GROUP BY sub2 ORDER BY sub2
+	</select>
+	
+	<!-- 매장이름 같은 거 검색 -->
+	<select id="findBystorename"  parameterType="String"  resultType="com.j.dto.StoreDTO">
+		select * from stores WHERE storename like '%${storename}%'
+	</select>
+	
+	<!-- 매장 지역 별로 검색 -->
+	<select id="storeList"  parameterType="com.j.dto.SearchSubDTO"  resultType="com.j.dto.StoreDTO">
+		select * from stores WHERE sub1 = #{sub1} and sub2 = #{sub2} ORDER BY sub1
+	</select>
+</mapper> 

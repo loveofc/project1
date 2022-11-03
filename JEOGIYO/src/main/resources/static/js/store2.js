@@ -39,9 +39,10 @@ function selectMain(){
 	let form = document.createElement("form");
 	let input = document. createElement("input");
 	input.value = value;
-	input.name = "sido";
+	input.name = "sub1";
 	form.append(input)
-	form.action = "http://localhost:9000/nav/map";
+	form.action = "http://localhost:8080/nav/map";
+	//form.action ="http://leeport.cafe24.com/nav/map";
 	form.method ="post";
 	document.body.append(form);
 	form.submit();
@@ -53,7 +54,7 @@ function selectSub(){
 	let value = main.value;
 	let input = document. createElement("input");
 	input.value = value;
-	input.name = "sido";
+	input.name = "sub1";
 
 	
 	//////////
@@ -62,23 +63,24 @@ function selectSub(){
 	let form2 = document.createElement("form");
 	let input2 = document. createElement("input");
 	input2.value = value2;
-	input2.name = "sido2";
+	input2.name = "sub2";
 	form2.append(input)
 	form2.append(input2)
-	form2.action = "http://localhost:9000/nav/map";
+	form2.action = "http://localhost:8080/nav/map";
+	//form2.action ="http://leeport.cafe24.com/nav/map";
 	form2.method ="post";
 	document.body.append(form2);
 	form2.submit();
 }
 
 //클릭시 위치 변경
-function s(vlaue) {
-	let addr = vlaue.childNodes[7].textContent;
+function s(value) {
+
+	let addr = value.childNodes[3].textContent.slice(6).replaceAll("'","")
 	let startIndex = addr.indexOf("(") + 1;
 	let lastIndex = addr.indexOf(")");
-	let storeName = vlaue.childNodes[1].textContent;
-	addr = addr.substring(startIndex, lastIndex);
-	console.log()
+	let storeName = value.childNodes[0].textContent;
+	console.log(addr)
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 		mapOption = {
 			center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표

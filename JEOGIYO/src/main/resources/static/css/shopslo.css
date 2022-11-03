@@ -40,12 +40,13 @@ body{
 	width: 1440px;
 	margin: 20px auto;	
 	display: flex;
+	justify-content: center;
 	
 }
 
 #storelists {
-	width: 550px;
-	height: 400px;
+	width: 630px;
+	height: 430px;
 	overflow: auto;
 	background-color: #969696;
 	color: white;
@@ -53,11 +54,13 @@ body{
 }
 
 .content {
+
 	margin-bottom: 15px;
 	border-top: 2px solid white;
 }
 
 .content:hover {
+	cursor:pointer;
 	color: black;
 	background-color: #ffffdb;
 }
@@ -79,7 +82,7 @@ body{
 }
 
 #map {
-	width: 808px;
+	width: 810px;
 	min-width: 200px; 
 	margin-left : 10px;	
 	height: 430px;

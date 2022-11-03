@@ -70,6 +70,15 @@
 	color: red;
 	background-color: #F0F8FF;
 }
+@media (max-width: 800px) {
+
+	#wrap{
+		width:100%;
+	}
+	#login{
+		width:100%;
+	}
+}
 </style>
 </head>
 <body>
@@ -83,7 +92,7 @@
 	<div id="wrap">
 		
 		<h2 id="logo">
-			<a href="../index">JEOGIYO 2000</a>
+			<a href="../">JEOGIYO 2000</a>
 		</h2>
 		<div>
 			<ul id="lists">
@@ -91,7 +100,7 @@
 				<li>|</li>
 				<li><a href="../nav/map">매장안내</a></li>
 				<li>|</li>
-				<li><a href="../nav/news">보도자료</a></li>
+				<li><a href="../news">뉴스검색</a></li>
 				<li>|</li>
 				<li><a href="../nav/orders">온라인주문</a></li>
 			</ul>
