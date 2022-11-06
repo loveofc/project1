@@ -21,7 +21,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
+//네이버 뉴스 검색 aip로 교촌관련 뉴스 불러오기
 @Service
 public class NewsService {
 	
