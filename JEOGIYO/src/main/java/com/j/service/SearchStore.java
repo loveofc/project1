@@ -16,7 +16,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser; // JSON객체 파싱
 import org.json.simple.parser.ParseException;
 
-
+//json파일 읽어서 출력하는버전 cafe24에 올린버전에서는 사용안함.
 
 public class SearchStore {
 	//URL ulr =this.getClass().getClassLoader().getResource("static");
